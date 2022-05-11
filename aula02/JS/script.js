@@ -12,10 +12,7 @@
 //   alert('Ocorreu algum erro!')
 // }
 
-const input = id => {
+const input = function () {
   const btn = document.getElementById(this.id)
   console.log(btn)
-  console.log('teste')
-
-  const input = document.getElementById('display')
 }
