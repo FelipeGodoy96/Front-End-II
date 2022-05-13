@@ -51,19 +51,34 @@ const listafelinos = [
 ]
 
 listafelinos.forEach(element => {
+  // Pega o Elemento Pai do DOM HTML com o ID 'elementoPai'
   const pai = document.getElementById('elementoPai')
+  // Cria um elemento <div>
   const div = document.createElement('div')
+  // Cria uma classe chamada 'item' no elemento <div>
   div.classList.add('item')
+  // Coloca o elemento div no elemento Pai
   pai.appendChild(div)
+  // Cria um elemento <h2>
   const h2 = document.createElement('h2')
+  // Cria um "Nó" de texto que vai receber a variável [index].titulo
   var textoh2 = document.createTextNode(`${element.titulo}`)
+  // Atribui o "nó" de texto ao elemento <h2>
   h2.appendChild(textoh2)
+  // Coloca o elemento h2 na div
   div.appendChild(h2)
+  // Cria um elemento <img>
   const img = document.createElement('img')
+  // Atribui o atributo 'src' com a source [index].imgURL
   img.setAttribute('src', `${element.imgURL}`)
+  // Coloca o elemento <img> na <div>
   div.appendChild(img)
+  // Cria um elemento <p>
   const p = document.createElement('p')
+  //Cria um "nó" de texto
   var textop = document.createTextNode(`${element.descricao}`)
+  // Atribui o "nó" de texto ao elemento <p>
   p.appendChild(textop)
+  // Coloca o elemento <p> na <div>
   div.appendChild(p)
 })
