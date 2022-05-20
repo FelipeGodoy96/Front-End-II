@@ -13,6 +13,7 @@
 // }
 
 const input = function () {
-  const btn = document.getElementById(this.id)
+  console.log(document.querySelectorAll('#btn'))
+  const btn = document.getElementById(document.querySelectorAll('input'))
   console.log(btn)
 }
