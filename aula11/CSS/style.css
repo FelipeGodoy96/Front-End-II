@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100vh;
+  background: rgb(2,225,251);
+  background: linear-gradient(159deg, rgba(2,225,251,1) 0%, rgba(45,119,253,1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  display: flex;
+  width: 25vw;
+  justify-content: center;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  position: relative;
+}
+
+.formItem .fa-circle-check {
+  position: absolute;
+  top: 42.5px;
+  right: 20px;
+  filter: brightness(0) saturate(100%) invert(29%) sepia(24%) saturate(1911%) hue-rotate(108deg) brightness(100%) contrast(102%);
+  visibility: hidden;
+}
+
+.formItem .fa-circle-xmark {
+  position: absolute;
+  top: 42.5px;
+  right: 20px;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(61%) saturate(4552%) hue-rotate(352deg) brightness(81%) contrast(90%);
+  visibility: hidden;
+}
+
+.formItem.success .fa-circle-check {
+  visibility: visible;
+}
+
+.formItem.failed .fa-circle-xmark {
+  visibility: visible;
+}
+
+.formItem.success input {
+  border:  1px solid #66cd00;
+}
+
+.formItem.failed input {
+  border: 1px solid #dc143c;
+}
+
+.formulario input {
+  padding: 10px;
+}
+
+.formulario button {
+  margin: 15px 0 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #00008b;
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.formStyle {
+  width: 15vw;
+}
+
+
+
