@@ -48,6 +48,20 @@ body {
   visibility: hidden;
 }
 
+.formItem .fa-eye {
+  position: absolute;
+  top: 42.5px;
+  left: 190px;
+  visibility: hidden;
+}
+
+.formItem .fa-eye-slash {
+  position: absolute;
+  top: 42.5px;
+  left: 189px;
+}
+
+
 .formItem.success .fa-circle-check {
   visibility: visible;
 }
