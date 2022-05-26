@@ -11132,11 +11132,32 @@ section .container-fluid .addDepoimento {
   width: 25%;
 }
 
+section .container-fluid .addDepoimento .addButton {
+  width: 50px;
+}
+
+section .container-fluid .addDepoimento .formularioSection {
+  font-family: Verdana;
+  background-color: #ec1b90;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 550;
+  border-radius: 10px;
+}
+
+section .container-fluid .addDepoimento .formularioSection .container form #descricao {
+  height: 200px;
+}
+
 section .container-fluid .mural {
   width: 75%;
 }
 
 section .container-fluid .mural .avatar {
-  min-height: 500px;
+  min-height: 400px;
 }
 /*# sourceMappingURL=style.css.map */

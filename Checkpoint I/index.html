@@ -33,42 +33,44 @@
             <div class="addButton">
               <i id="toggleForm" class="fa-3x fa-solid fa-square-plus"></i>
             </div>
-            <div id="formulario" class="formulario">
-              <div class="mt-3 mb-3 text-center">
-                <p class="">Crie seu depoimento</p>
-                <div class="container">
-                  <form>
-                    <label for="nome" class="form-label">Título:</label>
-                    <input
-                      class="form-control mb-2"
-                      type="text"
-                      name="nome"
-                      id="nome"
-                      maxlength="20"
-                    />
+            <div
+              id="formulario"
+              class="mt-3 mb-3 text-center formularioSection"
+            >
+              <br />
+              <p>Crie seu depoimento</p>
+              <br />
+              <div class="container">
+                <form class="mt-2 mb-2">
+                  <label for="nome" class="form-label">Título:</label>
+                  <input
+                    class="form-control mb-2"
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    maxlength="20"
+                  />
 
-                    <label for="descricao" class="form-label"
-                      >Depoimento:</label
-                    >
-                    <input
-                      class="form-control mb-2"
-                      type="text"
-                      name="descricao"
-                      id="descricao"
-                      maxlength="500"
-                    />
-                    <label for="url" class="form-label">URL imagem:</label>
-                    <input
-                      class="form-control mb-2"
-                      type="text"
-                      name="url"
-                      id="url"
-                    />
-                    <button class="btn btn-dark mb-1 mt-2" type="submit">
-                      Submit
-                    </button>
-                  </form>
-                </div>
+                  <label for="descricao" class="form-label">Depoimento:</label>
+                  <input
+                    class="form-control mb-2"
+                    type="text"
+                    name="descricao"
+                    id="descricao"
+                    maxlength="500"
+                    placeholder="Máx. 500 caracteres."
+                  />
+                  <label for="url" class="form-label">URL imagem:</label>
+                  <input
+                    class="form-control mb-2"
+                    type="text"
+                    name="url"
+                    id="url"
+                  />
+                  <button class="btn btn-dark mb-3 mt-3" type="submit">
+                    Submit
+                  </button>
+                </form>
               </div>
             </div>
           </div>

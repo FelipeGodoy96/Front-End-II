@@ -44,11 +44,29 @@ section {
     justify-content: space-evenly;
     .addDepoimento {
       width: 25%;
+      .addButton {
+        width: 50px;
+      }
+      .formularioSection {
+        font-family: Verdana;
+        background-color: rgb(236, 27, 144);
+        backdrop-filter: blur(20px);
+        user-select: none;
+        font-weight: 550;
+        border-radius: 10px;
+        .container {
+          form {
+            #descricao {
+              height: 200px;
+            }
+          }
+        }
+      }
     }
     .mural {
       width: 75%;
       .avatar {
-        min-height: 500px;
+        min-height: 400px;
       }
     }
   }
