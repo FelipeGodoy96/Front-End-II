@@ -1,0 +1,36 @@
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@400;700&display=swap');
+
+body {
+  background-color: #D4DDED;
+}
+
+header {
+  h1 {
+    font-family: 'MuseoModerno';
+    font-weight: 600;
+    color: #EC1B90;
+  }
+}
+
+.muralSection {
+  .container {
+    .addButton {
+      display: flex;
+      flex-direction: row-reverse;
+      }
+    .formulario {
+      font-family: Verdana;
+      background-color: rgb(236, 27, 144);
+      background-size: 100%;
+      backdrop-filter: blur(20px);
+      .container {
+        display: flex;
+      }
+    }
+  }
+}
