@@ -51,14 +51,14 @@ body {
 .formItem .fa-eye {
   position: absolute;
   top: 42.5px;
-  left: 190px;
+  left: 280px;
   visibility: hidden;
 }
 
 .formItem .fa-eye-slash {
   position: absolute;
   top: 42.5px;
-  left: 189px;
+  left: 279px;
 }
 
 
