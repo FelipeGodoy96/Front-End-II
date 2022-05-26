@@ -16,50 +16,61 @@
   </head>
   <body>
     <header>
-      <h1 class="text-center mt-3 mb-3">Orkut - Depoimentos</h1>
+      <h1 class="text-center mt-3 mb-3">orkut</h1>
     </header>
     <main>
-      <section class="muralSection">
-        <div class="container grid">
-          <div id="grid" class="g-col-10 addButton">
-            <i id="toggleForm" class="fa-3x fa-solid fa-square-plus"></i>
+      <section>
+        <div class="container-fluid mt-3 mb-3">
+          <div class="grid mt-5 mural text-center">
+            <div class="g-col-4 avatar">EXEMPLO1</div>
+            <div class="g-col-4 avatar">EXEMPLO2</div>
+            <div class="g-col-4 avatar">EXEMPLO3</div>
+            <div class="g-col-4 avatar">EXEMPLO4</div>
+            <div class="g-col-4 avatar">EXEMPLO5</div>
+            <div class="g-col-4 avatar">EXEMPLO6</div>
           </div>
-          <div id="formulario" class="g-col-2 formulario">
-            <div class="mt-3 mb-3">
-              <p class="text-center">Crie seu depoimento</p>
-              <div class="container text-center">
-                <form>
-                  <label for="nome" class="form-label">Título:</label>
-                  <input
-                    class="form-control mb-2"
-                    type="text"
-                    name="nome"
-                    id="nome"
-                  />
-                  <label for="descricao" class="form-label">Depoimento:</label>
-                  <input
-                    class="form-control mb-2"
-                    type="text"
-                    name="descricao"
-                    id="descricao"
-                  />
-                  <label for="url" class="form-label">URL imagem:</label>
-                  <input
-                    class="form-control mb-2"
-                    type="text"
-                    name="url"
-                    id="url"
-                  />
-                  <button class="" type="submit">Submit</button>
-                </form>
+          <div class="addDepoimento">
+            <div class="addButton">
+              <i id="toggleForm" class="fa-3x fa-solid fa-square-plus"></i>
+            </div>
+            <div id="formulario" class="formulario">
+              <div class="mt-3 mb-3 text-center">
+                <p class="">Crie seu depoimento</p>
+                <div class="container">
+                  <form>
+                    <label for="nome" class="form-label">Título:</label>
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="nome"
+                      id="nome"
+                      maxlength="20"
+                    />
+
+                    <label for="descricao" class="form-label"
+                      >Depoimento:</label
+                    >
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="descricao"
+                      id="descricao"
+                      maxlength="500"
+                    />
+                    <label for="url" class="form-label">URL imagem:</label>
+                    <input
+                      class="form-control mb-2"
+                      type="text"
+                      name="url"
+                      id="url"
+                    />
+                    <button class="btn btn-dark mb-1 mt-2" type="submit">
+                      Submit
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="grid">
-            <!-- <div class="g-col-4">AVATAR</div>
-            <div class="g-col-4">AVATAR</div>
-            <div class="g-col-4">AVATAR</div>
-            <div class="g-col-4">AVATAR</div> -->
           </div>
         </div>
       </section>

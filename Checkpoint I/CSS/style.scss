@@ -17,19 +17,38 @@ header {
   }
 }
 
-.muralSection {
-  .container {
-    .addButton {
-      display: flex;
-      flex-direction: row-reverse;
-      }
-    .formulario {
-      font-family: Verdana;
-      background-color: rgb(236, 27, 144);
-      background-size: 100%;
-      backdrop-filter: blur(20px);
-      .container {
-        display: flex;
+// .muralSection {
+//   .grid {
+//     .addButton {
+//       display: flex;
+//       flex-direction: row-reverse;
+//       height: 43.5px;
+//       }
+//     .formulario {
+//       font-family: Verdana;
+//       background-color: rgb(236, 27, 144);
+//       background-size: 100%;
+//       backdrop-filter: blur(20px);
+//       user-select: none;
+//       font-weight: 550;
+//       .container {
+        
+//       }
+//     }
+//   }
+// }
+
+section {
+  .container-fluid {
+    display: flex;
+    justify-content: space-evenly;
+    .addDepoimento {
+      width: 25%;
+    }
+    .mural {
+      width: 75%;
+      .avatar {
+        min-height: 500px;
       }
     }
   }

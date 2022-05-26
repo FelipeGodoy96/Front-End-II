@@ -11119,27 +11119,24 @@ header h1, header .h1 {
   color: #EC1B90;
 }
 
-.muralSection .container .addButton {
+section .container-fluid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.muralSection .container .formulario {
-  font-family: Verdana;
-  background-color: #ec1b90;
-  background-size: 100%;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+section .container-fluid .addDepoimento {
+  width: 25%;
 }
 
-.muralSection .container .formulario .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+section .container-fluid .mural {
+  width: 75%;
+}
+
+section .container-fluid .mural .avatar {
+  min-height: 500px;
 }
 /*# sourceMappingURL=style.css.map */
