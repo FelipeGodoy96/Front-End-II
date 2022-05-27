@@ -24,21 +24,28 @@ function addDepoimento() {
     const titulo = document.getElementById('titulo').value
     const depoimento = document.getElementById('depoimento').value
     const urlImagem = document.getElementById('url').value
-    var card = `<div id="card${id}" class="g-col-12 g-col-md-4 mt-4 avatar">
-     <div class="card">
+    var card = `<div id="card${id}" class="g-col-12 g-col-md-6 mt-2 mb-2 grid avatar">
+    <div class="card g-col-md-4">
       <img
-        src="${urlImagem}"
-        class="card-img-top img-fluid"
-        
+        src="https://cdn-icons-png.flaticon.com/512/6541/6541016.png"
+        class="img-fluid"
       />
-      <div class="card-body">
-        <h5 class="card-title">${titulo}</h5>
-        <p class="card-text">
-          ${depoimento}
-        </p> 
-      </div>
     </div>
-    <button type="button" onClick=delCard('card${id}') class="text-center mt-1 mb-1 btn btn-danger">Deletar</button>     
+    <div class="g-col-md-8 card-body">
+      <h5 class="card-title">${titulo}</h5>
+      <p class="card-text text-start">
+        ${depoimento}
+      </p>
+    </div>
+    <div class="text-center g-col-12 deleteButton">
+      <button
+        type="button"
+        onclick="delCard('card${id}')"
+        class="mt-1 mb-1 btn btn-danger"
+      >
+        Deletar
+      </button>
+    </div>
   </div>`
 
     const tituloErro = document.getElementById('tituloErro')

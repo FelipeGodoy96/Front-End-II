@@ -60,7 +60,8 @@ section {
         max-height: 400px;  
         background-color: #D4DDED; 
         padding: 2px;
-        margin-left: 5px; 
+        margin-left: 3px; 
+        margin-right: 3px;
         border-radius: 2.5px; 
         .card {
           position: relative;
@@ -81,6 +82,7 @@ section {
 
 @include media-breakpoint-down(sm) {
   .container-fluid {
+    display: flex;
     flex-direction: column;  
     .addDepoimento {
       order: 0;
