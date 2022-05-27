@@ -1,3 +1,8 @@
+// ---  VARIÁVEIS GLOBAIS  --- //
+var id = 0
+
+// ---  FUNÇÕES  --- //
+
 function toggle() {
   const toggleForm = document.getElementById('toggleForm')
   toggleForm.addEventListener('click', event => {
@@ -14,12 +19,13 @@ function addDepoimento() {
   const button = document.getElementById('submit')
   button.addEventListener('click', event => {
     event.preventDefault()
+
     const mural = document.getElementById('mural')
     const titulo = document.getElementById('titulo').value
     const depoimento = document.getElementById('depoimento').value
     const urlImagem = document.getElementById('url').value
-    var card = `<div class="g-col-12 g-col-md-4 avatar">
-    <div class="card">
+    var card = `<div id="card${id}" class="g-col-12 g-col-md-4 mt-4 avatar">
+     <div class="card">
       <img
         src="${urlImagem}"
         class="card-img-top img-fluid"
@@ -29,10 +35,12 @@ function addDepoimento() {
         <h5 class="card-title">${titulo}</h5>
         <p class="card-text">
           ${depoimento}
-        </p>      
+        </p> 
       </div>
     </div>
+    <button type="button" onClick=delCard('card${id}') class="text-center mt-1 mb-1 btn btn-danger">Deletar</button>     
   </div>`
+
     const tituloErro = document.getElementById('tituloErro')
     const depoimentoErro = document.getElementById('depoimentoErro')
     const urlErro = document.getElementById('urlErro')
@@ -86,8 +94,14 @@ function addDepoimento() {
       urlErro.textContent = ''
       submitErro.textContent = ''
       mural.insertAdjacentHTML('beforeend', card)
+      id++
     }
   })
+}
+
+function delCard(id) {
+  const card = document.getElementById(id)
+  card.remove()
 }
 
 // ---  INICIALIZAÇÃO  --- //
