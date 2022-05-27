@@ -11129,7 +11129,7 @@ section .container-fluid {
 }
 
 section .container-fluid .addDepoimento {
-  width: 25%;
+  width: 25vw;
 }
 
 section .container-fluid .addDepoimento .addButton {
@@ -11149,15 +11149,64 @@ section .container-fluid .addDepoimento .formularioSection {
   border-radius: 10px;
 }
 
-section .container-fluid .addDepoimento .formularioSection .container form #descricao {
+section .container-fluid .addDepoimento .formularioSection .container form #depoimento {
   height: 200px;
 }
 
 section .container-fluid .mural {
-  width: 75%;
+  width: 70vw;
 }
 
 section .container-fluid .mural .avatar {
   min-height: 400px;
+  max-height: 400px;
+}
+
+section .container-fluid .mural .avatar .card {
+  position: relative;
+  height: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+section .container-fluid .mural .avatar .card img {
+  border-radius: 10px;
+  max-height: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media (max-width: 575.98px) {
+  .container-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-fluid .addDepoimento {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container-fluid .addDepoimento .formularioSection {
+    width: 92.5vw;
+  }
+  .container-fluid .mural {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .container-fluid .mural .avatar {
+    width: 92.5vw;
+  }
 }
 /*# sourceMappingURL=style.css.map */
