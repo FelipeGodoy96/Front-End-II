@@ -11153,6 +11153,10 @@ section .container-fluid .addDepoimento .formularioSection .container form #depo
   height: 200px;
 }
 
+section .container-fluid .addDepoimento .formularioSection .container .erroMsg {
+  color: white;
+}
+
 section .container-fluid .mural {
   width: 70vw;
 }
