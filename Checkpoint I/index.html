@@ -21,7 +21,35 @@
     <main>
       <section>
         <div class="container-fluid mt-3 mb-3">
-          <div id="mural" class="grid mt-5 mural text-center"></div>
+          <div id="mural" class="grid mt-5 mural text-center">
+            <div id="card0" class="g-col-12 g-col-md-4 mt-4 avatar">
+              <div class="card">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                  class="img-fluid rounded-start"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">.</h5>
+                  <p class="card-text">
+                    olha... te achei muito gata... seus erros de protugues n
+                    interferem em nada da sua blz. sou casado e muito bem de
+                    situação... empresario em campo grande MS. gostaria muioto
+                    de poder falar com vc pelo msn ou por telefone até... adorei
+                    suas fotos e gostaria de poder te paparicar e ter vc para
+                    mim... como fazemos? me mande uma resposta... mandei como
+                    depoimento para que ninguem veja. um grande beij
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="delCard('card0')"
+                class="text-center mt-1 mb-1 btn btn-danger"
+              >
+                Deletar
+              </button>
+            </div>
+          </div>
           <div class="addDepoimento">
             <div class="addButton">
               <i id="toggleForm" class="fa-3x fa-solid fa-square-plus"></i>
@@ -41,7 +69,7 @@
                     type="text"
                     name="titulo"
                     id="titulo"
-                    maxlength="20"
+                    maxlength="40"
                   />
                   <div class="mt-2 mb-2 erroMsg" id="tituloErro"></div>
 
@@ -51,7 +79,7 @@
                     type="text"
                     name="depoimento"
                     id="depoimento"
-                    maxlength="250"
+                    maxlength="400"
                   />
                   <div class="mt-2 mb-2 erroMsg" id="depoimentoErro"></div>
                   <label for="url" class="form-label">URL imagem:</label>

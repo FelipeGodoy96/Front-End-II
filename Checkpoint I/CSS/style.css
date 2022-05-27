@@ -11178,10 +11178,8 @@ section .container-fluid .mural .avatar .card {
 
 section .container-fluid .mural .avatar .card img {
   border-radius: 10px;
-  max-height: 50%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  max-height: 45%;
+  width: 30%;
 }
 
 @media (max-width: 575.98px) {
