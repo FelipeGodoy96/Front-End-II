@@ -25,28 +25,27 @@ function addDepoimento() {
     const depoimento = document.getElementById('depoimento').value
     const urlImagem = document.getElementById('url').value
     var card = `<div id="card${id}" class="g-col-12 g-col-md-6 mt-2 mb-2 grid avatar">
-    <div class="card g-col-md-4">
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/6541/6541016.png"
-        class="img-fluid"
-      />
-    </div>
-    <div class="g-col-md-8 card-body">
-      <h5 class="card-title">${titulo}</h5>
-      <p class="card-text text-start">
-        ${depoimento}
-      </p>
-    </div>
-    <div class="text-center g-col-12 deleteButton">
-      <button
-        type="button"
-        onclick="delCard('card${id}')"
-        class="mt-1 mb-1 btn btn-danger"
-      >
-        Deletar
-      </button>
-    </div>
-  </div>`
+      <div class="card g-col-4 g-col-md-4">
+                <img
+                  src="${urlImagem}"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="g-col-8 g-col-md-8 card-body">
+                <h5 class="card-title">${titulo}</h5>
+                <p class="card-text text-start">
+                  ${depoimento}
+                </p>
+              </div>
+              <div class="text-center g-col-12 deleteButton">
+                <button
+                  type="button"
+                  onclick="delCard('card${id}')"
+                  class="mt-1 mb-1 btn btn-danger"
+                >
+                  Deletar
+                </button>
+              </div>`
 
     const tituloErro = document.getElementById('tituloErro')
     const depoimentoErro = document.getElementById('depoimentoErro')

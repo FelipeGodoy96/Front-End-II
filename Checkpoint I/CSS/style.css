@@ -11166,7 +11166,6 @@ section .container-fluid .addDepoimento .formularioSection .container .erroMsg {
 
 section .container-fluid .mural {
   width: 70vw;
-  background-color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -11174,6 +11173,7 @@ section .container-fluid .mural {
 }
 
 section .container-fluid .mural .avatar {
+  border: solid 1px white;
   min-height: 400px;
   max-height: 400px;
   background-color: #D4DDED;
@@ -11227,9 +11227,16 @@ section .container-fluid .mural .avatar .card img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    background-color: #D4DDED;
   }
   .container-fluid .mural .avatar {
     width: 92.5vw;
+    position: block;
+    overflow: auto;
+    padding: 0px;
+  }
+  .container-fluid .mural .avatar .card img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

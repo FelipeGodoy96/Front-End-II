@@ -53,9 +53,10 @@ section {
     }
     .mural {
       width: 70vw;
-      background-color: white;
+      // background-color: white;
       user-select: none;
       .avatar {
+        border: solid 1px white;
         min-height: 400px;
         max-height: 400px;  
         background-color: #D4DDED; 
@@ -95,9 +96,19 @@ section {
     }
     .mural {
       order: 1;
+      background-color: #D4DDED;
       .avatar {
         width: 92.5vw;
+        position: block;
+        overflow: auto;
+        padding: 0px;
+        .card {
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }
+
 }
