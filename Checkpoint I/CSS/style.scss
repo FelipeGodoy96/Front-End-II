@@ -15,7 +15,6 @@ header {
     font-family: 'MuseoModerno';
     font-weight: 600;
     color: #EC1B90;
-    user-select: none;
   }
 }
 
@@ -53,25 +52,27 @@ section {
     }
     .mural {
       width: 70vw;
-      background-color: white;
-      user-select: none;
       .avatar {
         min-height: 400px;
-        max-height: 400px;  
-        background-color: #D4DDED; 
-        padding: 2px;
-        margin-left: 5px; 
-        border-radius: 2.5px; 
+        max-height: 400px;
+       
         .card {
           position: relative;
-          min-height: 35%;
-          max-height: 35%;
-          max-width: 100%;
-          min-width: 100%;
-          background-color: #D4DDED;  
-          border: none;
+          height: 100%;
+          max-height: 100%;
+          border-radius: 10px;
+          overflow: auto;
           img {
-            width: 100%;      
+            border-radius: 10px;
+            max-height: 45%;
+            width: 30%;
+          }
+          .card-body {
+            p {
+              color: black;
+            
+            
+            }
           }
         }
       }
