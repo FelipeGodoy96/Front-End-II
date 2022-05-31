@@ -11144,14 +11144,14 @@ section .container-fluid .addDepoimento .addButton {
 section .container-fluid .addDepoimento .formularioSection {
   font-family: Verdana;
   background-color: #ec1b90;
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   font-weight: 550;
   border-radius: 10px;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
 }
 
 section .container-fluid .addDepoimento .formularioSection .container form #depoimento {
@@ -11181,6 +11181,7 @@ section .container-fluid .mural .avatar {
   margin-left: 3px;
   margin-right: 3px;
   border-radius: 2.5px;
+  overflow: auto;
 }
 
 section .container-fluid .mural .avatar .card {

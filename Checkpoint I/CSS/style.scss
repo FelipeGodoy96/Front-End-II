@@ -33,11 +33,12 @@ section {
       .formularioSection {
         font-family: Verdana;
         background-color: rgb(236, 27, 144);
-        backdrop-filter: blur(20px);
         user-select: none;
         font-weight: 550;
         border-radius: 10px;
+        backdrop-filter: blur(8px);
         .container {
+        
           form {
             #depoimento {
               height: 200px;
@@ -53,7 +54,6 @@ section {
     }
     .mural {
       width: 70vw;
-      // background-color: white;
       user-select: none;
       .avatar {
         border: solid 1px white;
@@ -63,7 +63,8 @@ section {
         padding: 2px;
         margin-left: 3px; 
         margin-right: 3px;
-        border-radius: 2.5px; 
+        border-radius: 2.5px;
+        overflow: auto; 
         .card {
           position: relative;
           min-height: 35%;

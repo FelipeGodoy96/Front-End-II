@@ -108,6 +108,7 @@ function addDepoimento() {
 function delCard(id) {
   const card = document.getElementById(id)
   card.remove()
+  alert('Depoimento deletado com sucesso')
 }
 
 // ---  INICIALIZAÇÃO  --- //
