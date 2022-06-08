@@ -26,14 +26,14 @@ async function fetchAPI() {
         const li = document.createElement('li')
         const img = document.createElement('img')
 
-        const imgData = async function () {
-          await fetch(`${element.url}`).then(response2 => {
+        function secondFetch() {
+          fetch(`${element.url}`).then(response2 => {
             response2.json().then(data2 => {
-              return data2.sprites.front_default
+              img.setAttribute('src', data2.sprites.front_default)
             })
           })
         }
-        img.setAttribute('src', imgData)
+        secondFetch()
 
         li.innerHTML = `<h1>${element.name}</h1>`
         lista.appendChild(li)
