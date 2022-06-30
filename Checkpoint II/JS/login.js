@@ -1,0 +1,142 @@
+const email = document.getElementById('inputEmail')
+const senha = document.getElementById('inputPassword')
+const loginForm = document.getElementById('form')
+const errorMessage = document.getElementById('errorMessage')
+const button = document.getElementById('submit')
+const btn = document.querySelector('.lnr-eye')
+
+var validEmail = false
+var validPass = false
+
+button.setAttribute('disabled', 'disabled')
+
+function isValidEmail(email) {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  )
+}
+
+function checkEmail() {
+  let errorElement = document.getElementById('emailError')
+  let errorMessage = []
+
+  if (email.value == '' || email.value == null) {
+    errorMessage.push('This field is required')
+    errorElement.innerText = errorMessage
+    email.style.setProperty('border', 'red 2px solid')
+    validEmail = false
+    return false
+  } else if (!isValidEmail(email.value)) {
+    errorMessage.push('Please, type a valid email')
+    errorElement.innerText = errorMessage
+    email.style.setProperty('border', 'red 2px solid')
+    validEmail = false
+    return false
+  } else {
+    email.style.setProperty('border', 'green 2px solid')
+    if (errorElement.length != 0) {
+      errorElement.innerText = ''
+    }
+    validEmail = true
+    return true
+  }
+}
+
+function checkPassword() {
+  let errorElement = document.getElementById('passError')
+  let errorMessage = []
+
+  if (senha.value == '' || senha.value == null) {
+    errorMessage.push('This field is required')
+    errorElement.innerText = errorMessage
+    senha.style.setProperty('border', 'red 2px solid')
+    validPass = false
+    return false
+  } else {
+    if (errorElement.length != 0) {
+      errorElement.innerText = ''
+    }
+    senha.style.setProperty('border', 'green 2px solid')
+    validPass = true
+    return true
+  }
+}
+
+email.addEventListener('keyup', () => {
+  validEmail = checkEmail()
+})
+
+senha.addEventListener('keyup', () => {
+  validPass = checkPassword()
+})
+
+function isAllFieldsValid() {
+  return validEmail && validPass
+}
+
+document.addEventListener('keyup', function () {
+  if (isAllFieldsValid()) {
+    button.removeAttribute('disabled')
+  } else {
+    button.setAttribute('disabled', 'disabled')
+  }
+})
+
+loginForm.addEventListener('submit', event => {
+  event.preventDefault()
+  fetch('https://ctd-todo-api.herokuapp.com/v1/users/login', {
+    method: 'POST',
+    headers: {
+      Accept: '*/* , application/json, text/plain',
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: `${email.value}`,
+      password: `${senha.value}`
+    })
+  })
+    .then(res => {
+      var resposta = res.statusText
+      if (resposta === 'Not Found') {
+        errorMessage.innerText = `Usuário não encontrado`
+      } else if (resposta === 'Bad Request') {
+        errorMessage.innerText = `Usuário ou senha incorretos`
+      }
+
+      if (!res.ok) {
+        throw Error(res)
+      } else {
+        res.json().then(data => {
+          localStorage.setItem('jwt', JSON.stringify(data.jwt))
+        })
+        Swal.fire({
+          icon: 'success',
+          title: 'Login successful',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        email.style.setProperty('border', 'green 2px solid')
+        senha.style.setProperty('border', 'green 2px solid')
+
+        function href() {
+          window.location.href = '/tarefas.html'
+        }
+
+        setTimeout(href, 1500)
+      }
+    })
+    .catch(err => {
+      email.style.setProperty('border', 'red 2px solid')
+      senha.style.setProperty('border', 'red 2px solid')
+    })
+})
+
+btn.addEventListener('click', function () {
+  let input = document.querySelector('#inputPassword')
+
+  if (input.getAttribute('type') == 'password') {
+    input.setAttribute('type', 'text')
+  } else {
+    input.setAttribute('type', 'password')
+  }
+})

@@ -89,3 +89,22 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+.lnr-eye {
+  position: absolute;
+  right: 29px;
+  margin-top: -20px;
+  cursor: pointer;
+}
+
+.wrong { 
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#nameError, #lastnameError, #emailError, #passwordError, #rePasswordError { 
+  font-size: 12.5px;
+  max-width: 200px;
+  font-weight: bold;
+}
